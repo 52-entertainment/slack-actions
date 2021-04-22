@@ -1,0 +1,30 @@
+{
+  "name": "slack-action",
+  "version": "1.0.0",
+  "description": "Allows custom messages as part of a GitHub Actions pipeline",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/52-entertainment/slack-actions.git"
+  },
+  "keywords": [
+    "slack",
+    "github",
+    "actions"
+  ],
+  "author": "Gaeel Bradshaw-Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/52-entertainment/slack-actions/issues"
+  },
+  "homepage": "https://github.com/52-entertainment/slack-actions#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.7",
+    "@actions/github": "^4.0.0",
+    "@slack/web-api": "^6.1.0"
+  }
+}
