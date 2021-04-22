@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Hello world action step
       id: hello
-      uses: 52-entertainment/slack-action@main
+      uses: 52-entertainment/slack-actions@main
       with:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         message: 'demo.json'
