@@ -1,13 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Post to slack'
+description: 'Allows custom messages as part of a GitHub Actions pipeline'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  SLACK_BOT_TOKEN:
+    description: 'Your token from Slack'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  message:
+    description: 'A json file from Slack Block Kit'
+    required: true
+  channel:
+    description: Channel to post to
+    required: true
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'

@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  post-to-slack:
+    runs-on: ubuntu-latest
+    name: Demo Slack Action
+    steps:
+    - name: Hello world action step
+      id: hello
+      uses: 52-entertainment/slack-action@main
+      with:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        message: 'demo.json'
