@@ -1,32 +1,36 @@
 {
   "channel": "#bot-test",
-	"blocks": [
-		{
-			"type": "section",
-			"text": {
-				"type": "plain_text",
-				"text": "Cool things are possible!",
-				"emoji": true
-			}
-		},
-		{
-			"type": "section",
-			"text": {
-				"type": "mrkdwn",
-				"text": "We can **even use markdown**: <https://github.com/52-entertainment/slack-actions/|Like this!>"
-			}
-		},
-		{
-			"type": "divider"
-		},
-		{
-			"type": "context",
-			"elements": [
-				{
-					"type": "mrkdwn",
-					"text": "${{ GITHUB_EVENT_NAME }} by ${{ GITHUB_ACTOR }}"
-				}
-			]
-		}
-	]
+  "blocks": [
+    {
+      "type": "section",
+      "text": {
+        "type": "plain_text",
+        "text": "We're posting cool stuff!",
+        "emoji": true
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "${{GITHUB_ACTOR}} is totally cool, btw 😉"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "${{V_EVENT}}"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "<${{V_COMMIT}}|${{GITHUB_REPOSITORY}}@${{V_SHA}}>"
+        }
+      ]
+    }
+  ]
 }
